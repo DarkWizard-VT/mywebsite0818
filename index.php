@@ -8,7 +8,7 @@
  ?> 
  <h1>This is Cloud Computing Class</h1>
   <h2><a href="https://vnexpress.net/">Link to vnexpress</a></h2>;
- 
+ <a href="https://www.24h.com.vn/">Link to 24h</a>
      <a href="ConnectToDB.php" target="_blank" >Connect database</a>
      <br/>
      <a href="InsertData.php" target="_blank" >Insert data to the database</a>
