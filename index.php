@@ -1,6 +1,6 @@
 <html>
  <head>
-  <title>Database Test</title>
+  <title>Hello THis is first Cloud app </title>
  </head>
  <body>
  <?php echo '<p>Database</p>'; 
