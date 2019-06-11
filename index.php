@@ -1,10 +1,13 @@
 <html>
  <head>
-  <title>Hello THis is first Cloud app </title>
+  <title>Cloud Computing </title>
  </head>
  <body>
- <?php echo '<p>Database</p>'; 
+ <?php echo '<p>Hello World</p>'; 
  
+ ?> 
+ <?php echo '<p1>This is Cloud Computing Class</p1>
+            Link to vnexpress (vnexpress.net)';
  ?> 
      <a href="ConnectToDB.php" target="_blank" >Connect database</a>
      <br/>
