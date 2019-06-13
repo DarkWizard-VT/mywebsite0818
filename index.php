@@ -7,9 +7,9 @@
  
  ?> 
  <h1>This is Cloud Computing Class</h1>
-  <h2><a href="https://vnexpress.net/">Link to vnexpress</a><br/>
- <a href="https://www.24h.com.vn/">Link to 24h</a></h2><br/>
+
      <a href="ConnectToDB.php" target="_blank" >Connect database</a>
+     <button class="btn btn-primary" type="submit">Button</button>
      <br/>
      <a href="InsertData.php" target="_blank" >Insert data to the database</a>
      <br/>
