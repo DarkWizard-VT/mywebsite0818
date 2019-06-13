@@ -8,8 +8,8 @@
  ?> 
  <h1>This is Cloud Computing Class</h1>
 
-     <a href="ConnectToDB.php" target="_blank" >Connect database</a>
-     <button class="btn btn-primary" type="submit">Button</button>
+  
+     <a href="ConnectToDB.php" target="_blank" ><button class="btn btn-outline-danger" type="submit">Connect database</button></a>
      <br/>
      <a href="InsertData.php" target="_blank" >Insert data to the database</a>
      <br/>
