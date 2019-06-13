@@ -28,8 +28,8 @@
 
   <a href="ConnectToDB.php" target="_blank" ><button class="w3-bar-item w3-button w3-hide-small w3-hover-white" type="submit">Connect database</button></a>
   <a href="InsertData.php" target="_blank" ><button class="w3-bar-item w3-button w3-hide-small w3-hover-white" type="submit">Insert data to the database</button></a>
-  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Work</a>
-  <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Price</a>
+  <a href="UpdateData.php" target="_blank" ><button class="w3-bar-item w3-button w3-hide-small w3-hover-white" type="submit">Update data to the database</button></a> 
+  <a href="DeleteData.php" target="_blank" ><button class="w3-bar-item w3-button w3-hide-small w3-hover-white" type="submit">Delete data to the database</button></a> 
 
     <div class="w3-dropdown-hover w3-hide-small">
     <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>     
@@ -51,16 +51,12 @@
     <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS">Cloud Computing </button>
   </div>
 </div>
-<h1>This is Cloud Computing Class</h1>
+
 
   
 
-<br/>
 
-<br/>
-<a href="UpdateData.php" target="_blank" >Update data to the database</a> 
-<br/>
-<a href="DeleteData.php" target="_blank" >Delete data to the database</a> 
+
 
 <!-- Modal -->
 <div id="id01" class="w3-modal">
