@@ -2,16 +2,16 @@
 <html>
 <body>
 
-<h1>INSERT DATA TO DATABASE</h1>
+<h1>DELETE DATA TO DATABASE</h1>
 
 <?php
-ini_set('display_errors', 1);
+
 echo "Insert database!";
 ?>
 <ul>
     <form name="DeleteData" action="DeleteData.php" method="POST" >
 <li>toyid:</li><li><input type="text" name="toyid" /></li>
-<li>toyname:</li><li><input type="text" name="toyname" /></li>
+
 
 <li><input type="submit" /></li>
 </form>

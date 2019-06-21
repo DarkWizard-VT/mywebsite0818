@@ -2,13 +2,20 @@
 <html>
 <body>
 
-<h1>INSERT DATA TO DATABASE</h1>
+<h1>UPDATE DATA TO DATABASE</h1>
 
 <?php
-ini_set('display_errors', 1);
+
 echo "Update database!";
 ?>
+<ul>
+<form name="InsertData" action="InsertData.php" method="POST" >
+<li>toyid:</li><li><input type="text" name="toyid" /></li>
+<li>toyname:</li><li><input type="text" name="toyname" /></li>
 
+<li><input type="submit" /></li>
+</form>
+</ul>
 <?php
 
 
@@ -28,20 +35,8 @@ if (empty(getenv("DATABASE_URL"))){
    ));
 }  
 
-//$sql = 'UPDATE student '
-//                . 'SET name = :name, '
-//                . 'WHERE ID = :id';
-// 
-//      $stmt = $pdo->prepare($sql);
-//      //bind values to the statement
-//        $stmt->bindValue(':name', 'Lee');
-//        $stmt->bindValue(':id', 'SV02');
-        // update data in the database
-//        $stmt->execute();
 
-        // return the number of row affected
-        //return $stmt->rowCount();
-$sql = "UPDATE student SET fname = 'Lee Chan Do' WHERE stuid = 'SV02'";
+$sql = "UPDATE toystore SET toyname = $_POST[toyname] WHERE toyid = $_POST[toyid]";
       $stmt = $pdo->prepare($sql);
 if($stmt->execute() == TRUE){
     echo "Record updated successfully.";
