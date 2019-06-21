@@ -29,15 +29,15 @@ if (empty(getenv("DATABASE_URL"))){
    ));
 }  
 
-$sql = "SELECT * FROM student ORDER BY stuid";
+$sql = "SELECT * FROM ToyStore ORDER BY ToyId";
 $stmt = $pdo->prepare($sql);
 //Thiết lập kiểu dữ liệu trả về
 $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $stmt->execute();
 $resultSet = $stmt->fetchAll();
-echo '<p>Students information:</p>';
+echo '<p>Toy information:</p>';
 foreach ($resultSet as $row) {
-	echo $row['stuid'];
+	echo $row['ToyId'];
         echo "    ";
         echo $row['fname'];
         echo "    ";
