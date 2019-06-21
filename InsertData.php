@@ -14,8 +14,8 @@ list-style: none;
 <h2>Enter data into ToyStore table</h2>
 <ul>
     <form name="InsertData" action="InsertData.php" method="POST" >
-<li>ToyId:</li><li><input type="text" name="ToyId" /></li>
-<li>ToyName:</li><li><input type="text" name="ToyName" /></li>
+<li>toyid:</li><li><input type="text" name="toyid" /></li>
+<li>toyname:</li><li><input type="text" name="toyname" /></li>
 
 <li><input type="submit" /></li>
 </form>
@@ -44,11 +44,11 @@ if($pdo === false){
 }
 
 
-$sql = "INSERT INTO ToyStore(ToyId, ToyName)"
-        . " VALUES('$_POST[ToyId]','$_POST[ToyName]')";
+$sql = "INSERT INTO toystore(toyid, toyname)"
+        . " VALUES('$_POST[toyid]','$_POST[toyname]')";
 $stmt = $pdo->prepare($sql);
 //$stmt->execute();
- if (is_null($_POST[ToyId])) {
+ if (is_null($_POST[toyid])) {
    echo "ToyId must be not null";
  }
  else
