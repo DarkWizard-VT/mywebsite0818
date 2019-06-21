@@ -2,16 +2,16 @@
 <html>
 <body>
 
-<h1>UPDATE DATA TO DATABASE</h1>
+<h1>Update DATA TO DATABASE</h1>
 
 <?php
 
 echo "Update database!";
 ?>
 <ul>
-<form name="UpdateData" action="UpdateData.php" method="POST" >
-<li>toyid:</li><li><input type="text" name="toyid" /></li>
-<li>toyname:</li><li><input type="text" name="toyname" /></li>
+    <form name="UpdateData" action="UpdateData.php" method="POST" >
+<li>toyID:</li><li><input type="text" name="toyid" /></li>
+<li>Toy Name:</li><li><input type="text" name="toyname" /></li>
 
 <li><input type="submit" /></li>
 </form>
@@ -26,7 +26,8 @@ if (empty(getenv("DATABASE_URL"))){
      
    $db = parse_url(getenv("DATABASE_URL"));
    $pdo = new PDO("pgsql:" . sprintf(
-        "host=ec2-174-129-240-67.compute-1.amazonaws.com;port=5432;user=wrflrxtavasvqh;password=fbfef36049fbd28f1200e3a775a389e014838e86522765e67782f9cf7a3f516b;dbname=d3mmhribgmc6bf",
+        "host=ec2-54-225-72-238.compute-1.amazonaws.com;port=5432;user=ceunivuhcevgju;password=4d325c3e99cf1899edf91c3f49af2bfad5864cbca9124356320bfa86cb111d63;dbname=d475nitcbnrrif",
+        
         $db["host"],
         $db["port"],
         $db["user"],
@@ -34,16 +35,14 @@ if (empty(getenv("DATABASE_URL"))){
         ltrim($db["path"], "/")
    ));
 }  
-
-
-$sql = "UPDATE toystore SET toyname = '$_POST[toyname]' WHERE toyid = '$_POST[toyid]'";
+$sql = "UPDATE toystore SET  toyname = '$_POST[toyname]' WHERE toyid = '$_POST[toyid]'";
       $stmt = $pdo->prepare($sql);
-      if(is_null ($_POST[toyid])== FALSE)  {    
-        if($stmt->execute() == TRUE){
-            echo "Record updated successfully.";
-        } else {
-            echo "Error updating record. ";
-        }}
+if(is_null ($_POST[toyid])== FALSE)  {    
+if($stmt->execute() == TRUE){
+    echo "Record updated successfully.";
+} else {
+    echo "Error updating record. ";
+}}
     
 ?>
 </body>
