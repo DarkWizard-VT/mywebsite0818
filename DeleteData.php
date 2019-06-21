@@ -8,7 +8,14 @@
 ini_set('display_errors', 1);
 echo "Insert database!";
 ?>
+<ul>
+    <form name="DeleteData" action="DeleteData.php" method="POST" >
+<li>toyid:</li><li><input type="text" name="toyid" /></li>
+<li>toyname:</li><li><input type="text" name="toyname" /></li>
 
+<li><input type="submit" /></li>
+</form>
+</ul>
 <?php
 
 
@@ -28,7 +35,7 @@ if (empty(getenv("DATABASE_URL"))){
    ));
 }  
 
-$sql = "DELETE FROM student WHERE stuid = 'SV02'";
+$sql = "DELETE FROM toystore WHERE toyid = '$_POST[toyid]'";
 $stmt = $pdo->prepare($sql);
 if($stmt->execute() == TRUE){
     echo "Record deleted successfully.";
