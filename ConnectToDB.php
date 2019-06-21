@@ -6,7 +6,7 @@
 
 <?php
 ini_set('display_errors', 1);
-echo "Hello Cloud computing class 0818!";
+echo "Welcome to Cloud computing class 0818!";
 ?>
 
 <?php
@@ -39,11 +39,9 @@ echo '<p>Toy information:</p>';
 foreach ($resultSet as $row) {
 	echo $row['ToyId'];
         echo "    ";
-        echo $row['fname'];
+        echo $row['ToyName'];
         echo "    ";
-        echo $row['email'];
-        echo "    ";
-        echo $row['classname'];
+       
         echo "<br/>";
 }
 
