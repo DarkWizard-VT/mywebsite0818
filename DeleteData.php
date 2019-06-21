@@ -2,20 +2,16 @@
 <html>
 <body>
 
-<h1>DELETE DATA TO DATABASE</h1>
+<h1>DELETE DATA FROM DATABASE</h1>
 
 <?php
 
-echo "Insert database!";
+echo "Delete database!";
 ?>
 <ul>
     <form name="DeleteData" action="DeleteData.php" method="POST" >
-<li>toyid:</li><li><input type="text" name="toyid" /></li>
-
-
-<li><input type="submit" /></li>
-</form>
-</ul>
+<li>toyID:</li><li><input type="text" name="toyid" /></li>
+<li><button type="submit" value="Submit">Delete</button></li>
 <?php
 
 
@@ -35,14 +31,15 @@ if (empty(getenv("DATABASE_URL"))){
    ));
 }  
 
-$sql = "DELETE FROM toystore WHERE toyid = '$_POST[toyid]'";
+$sql = "DELETE FROM toy WHERE toyid = '$_POST[toyid]'";
 $stmt = $pdo->prepare($sql);
-if($stmt->execute() == TRUE){
-    echo "Record deleted successfully.";
-} else {
-    echo "Error deleting record: ";
-}
 
+if(is_null ($_POST[toyid])== FALSE)  {    
+    if($stmt->execute() == TRUE){
+        echo "Record updated successfully.";
+    } else {
+        echo "Error updating record. ";
+    }}
 ?>
 </body>
 </html>
