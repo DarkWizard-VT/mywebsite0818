@@ -9,7 +9,7 @@
 echo "Update database!";
 ?>
 <ul>
-<form name="InsertData" action="InsertData.php" method="POST" >
+<form name="UpdateData" action="UpdateData.php" method="POST" >
 <li>toyid:</li><li><input type="text" name="toyid" /></li>
 <li>toyname:</li><li><input type="text" name="toyname" /></li>
 
@@ -17,9 +17,7 @@ echo "Update database!";
 </form>
 </ul>
 <?php
-//database info//
 
-// database info//
 
 if (empty(getenv("DATABASE_URL"))){
     echo '<p>The DB does not exist</p>';
