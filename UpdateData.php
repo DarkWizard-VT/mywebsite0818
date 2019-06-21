@@ -34,20 +34,7 @@ if (empty(getenv("DATABASE_URL"))){
         ltrim($db["path"], "/")
    ));
 }  
-$sql = "SELECT * FROM toystore ORDER BY toyid";
-$stmt = $pdo->prepare($sql);
-//Thiết lập kiểu dữ liệu trả về
-$stmt->setFetchMode(PDO::FETCH_ASSOC);
-$stmt->execute();
-$resultSet = $stmt->fetchAll();
-echo '<p>Toy information:</p>';
-foreach ($resultSet as $row) {
-	echo $row['toyid'];
-        echo "    ";
-        echo $row['toyname'];
-        echo "    ";
-       
-        echo "<br/>";
+
 
 $sql = "UPDATE toystore SET toyname = $_POST[toyname] WHERE toyid = $_POST[toyid]";
       $stmt = $pdo->prepare($sql);
