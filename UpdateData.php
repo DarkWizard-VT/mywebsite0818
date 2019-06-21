@@ -70,7 +70,7 @@ if (empty(getenv("DATABASE_URL"))){
 }  
 
 
-$sql = "UPDATE toystore SET toyname = $_POST[toyname] WHERE toyid = $_POST[toyid]";
+$sql = "UPDATE toystore SET toyname = '$_POST[toyname]' WHERE toyid = '$_POST[toyid]'";
       $stmt = $pdo->prepare($sql);
 if($stmt->execute() == TRUE){
     echo "Record updated successfully.";
