@@ -38,11 +38,12 @@ if (empty(getenv("DATABASE_URL"))){
 
 $sql = "UPDATE toystore SET toyname = '$_POST[toyname]' WHERE toyid = '$_POST[toyid]'";
       $stmt = $pdo->prepare($sql);
-if($stmt->execute() == TRUE){
-    echo "Record updated successfully.";
-} else {
-    echo "Error updating record. ";
-}
+      if(is_null ($_POST[toyid])== FALSE)  {    
+        if($stmt->execute() == TRUE){
+            echo "Record updated successfully.";
+        } else {
+            echo "Error updating record. ";
+        }}
     
 ?>
 </body>
