@@ -8,14 +8,7 @@
 
 echo "Update database!";
 ?>
-<ul>
-<form name="UpdateData" action="UpdateData.php" method="POST" >
-<li>toyid:</li><li><input type="text" name="toyid" /></li>
-<li>toyname:</li><li><input type="text" name="toyname" /></li>
 
-<li><input type="submit" /></li>
-</form>
-</ul>
 <?php
 
 
