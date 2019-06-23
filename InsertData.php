@@ -44,7 +44,7 @@ if($pdo === false){
 }
 
 
-$sql = "INSERT INTO toystore(toyid, toyname)"
+$sql = "INSERT INTO Toystore(toyid, toyname)"
         . " VALUES('$_POST[toyid]','$_POST[toyname]')";
 $stmt = $pdo->prepare($sql);
 //$stmt->execute();
